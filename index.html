@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- for favicon  -->
+    <link rel="icon" type="image/x-icon" href="favicon .png">
+    
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css" integrity="sha512-1fPmaHba3v4A7PaUsComSM4TBsrrRGs+/fv0vrzafQ+Rw+siILTiJa0NtFfvGeyY5E182SDTaF5PqP+XOHgJag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- for aos scroll animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- font awsome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap link for gallary -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+
+
+<style>
+ /*--- preloder start ---*/
+ #loading {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #fff url('img/preload.png') no-repeat center;
+            z-index: 99999;
+        }
+ /*--- preloder start ---*/
+
+ .bag-color {
+    background: rgba(22, 21, 21, 0.945);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+h2, h3, h4 {
+    color: aqua;
+}
+
+/*----- Header section start -----*/
+#myHeader {
+    width: 100%;
+    height: 100vh;
+    background: url("banner.jpg") top right no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  @media (min-width: 992px) {
+    #myHeader {
+      padding-left: 160px;
+    }
+  }
+  
+  #myHeader:before {
+    content: "";
+    background: rgba(22, 21, 21, 0.945);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #myHeader h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color:#b3ffff;
+  }
+  
+  #myHeader p {
+    color: #b3ffff;
+    margin: 15px 0 0 0;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #myHeader p span {
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  
+  #myHeader .social-links {
+    margin-top: 30px;
+  }
+  
+  #myHeader .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    color: #b3ffff;
+    line-height: 1;
+    margin-right: 20px;
+    transition: 0.3s;
+  }
+  
+  #myHeader .social-links a:hover {
+    color: #404040;
+  }
+  
+  @media (max-width: 992px) {
+    #myHeader {
+      text-align: center;
+    }
+    #myHeader h1 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    #myHeader p {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  
+  /*---- Header section end  ----*/
+
+/*---- about section start -----*/
+.underline {
+    width: 150px;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-para {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+}
+/*---- about section end -----*/
+
+/*----- skills section start -----*/
+.sg-para {
+    font-family: 'Italianno', cursive;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+  }
+  
+  .skills .progress .skill {
+    padding: 10px 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: aqua;
+  }
+  
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+  
+  .skills .progress-bar-wrap {
+    background: #f2f3f5;
+  }
+  
+  .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: #0563bb;
+  }
+  /*----- skills section end -----*/
+
+  /*----- service section start -----*/
+  .fnt-color {
+    color: aqua;
+  }
+
+  .service .service-roll {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid aqua;
+    position: relative;
+  }
+  
+  .service .service-roll::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #0563bb;
+  }
+
+  .service-desc ul li {
+      list-style: none;
+  }
+  /*----- service section end -----*/
+  
+
+  /*----- contact section start -----*/
+   .contact {
+    margin: 5rem 0;
+    padding: 1px 0;
+   }
+   .contact:hover {
+    background: rgba(0, 0, 0, 0.233);
+    box-shadow: 2px 3px 5px 0 wheat;
+   }
+
+   .contact form{
+    max-width: 70rem;
+    margin:2rem auto;
+    text-align: center;
+}
+
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form textarea{
+    width: 100%;
+    background:#333;
+    border-radius: .5rem;
+    padding:1rem;
+    margin:.7rem 0;
+    font-size: 1rem;
+    color:#fff;
+    text-transform: none;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form textarea::placeholder{
+    color:#eee;
+    text-transform: capitalize;
+}
+
+.contact form .inputBox input:focus,
+.contact form textarea:focus
+.contact form .btn:focus{
+    background:#444;
+}
+
+.contact form .inputBox input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.contact form .btn {
+  background-color: #fff;
+  color: rgba(22, 21, 21, 0.945);
+  font-size: 20px;
+  border: 2px solid aqua;
+  border-radius: 5px;
+}
+
+.contact form .btn:hover, .contact form .btn:focus {
+  background-color: rgba(22, 21, 21, 0.945);
+  color: #fff;
+}
+  /*----- contact section end -----*/
+
+   /*----- footer section start -----*/
+  footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .social_icon, footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+footer .social_icon li, footer .menu li {
+   list-style: none;
+}
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover {
+    transform: translateY(-10px);
+}
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu li a:hover {
+    opacity: 1;
+}
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em
+}
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateweve 4s linear infinite;
+}
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateweve_02 4s linear infinite;
+}
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateweve 3s linear infinite;
+}
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateweve_02 3s linear infinite;
+}
+@keyframes animateweve {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+@keyframes animateweve_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+  /*----- footer section end -----*/
+
+
+
+</style>
+</head>
+    <body onload="myfunction()">
+      <div id="loading"></div>
+
+          <div class="container-fluid bag-color">
+            <div class="row">
+                <div class="col-sm-auto bg-dark sticky-top">
+                    <div class="d-flex flex-sm-column flex-row flex-nowrap bg-dark align-items-center sticky-top">
+                        <a href="#" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                            <img src="profile.jpg" class="img-fluid rounded-circle" width="50px" alt="">
+                        </a>
+                        <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                                    <!-- <i class="bi bi-house-door-fill fs-1 text-light"></i> -->
+                                    <i class="fas fa-home fa-2x text-light"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                                  <i class="fas fa-user fa-2x text-light"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#skills" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                                  <i class="fas fa-head-side-virus fa-2x text-light"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#gallary" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                                  <i class="bi bi-image fa-2x text-light"></i>
+                                </a>
+                            </li>
+                            <li>
+                              <a href="#service" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                                <i class="fas fa-bars fa-2x text-light"></i>
+                              </a>
+                            </li>                        
+                            <li>
+                                <a href="#contact" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                                  <i class="fas fa-envelope fa-2x text-light"></i>
+                                </a>
+                            </li>
+                            <li>
+                              <a href="#massage" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                                <i class="fas fa-phone-alt fa-2x text-light"></i>
+                              </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm p-3 min-vh-100">
+                    <!-- content -->
+
+                     <!-- Header start  -->
+                     <header>
+                      <div id="myHeader" class="d-flex flex-column justify-content-center">
+                        <div class="container" data-aos="zoom-in" data-aos-delay="100">
+                          <h1>Akram Ahmed</h1>
+                          <p>I'm <span class="typed"></span></p>
+                          <div class="social-links">
+                              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                              <a href="https://www.facebook.com/kamran.kamranahmed.545/" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                              <a href="https://www.instagram.com/kamran_ahmed09/" class="instagram"><i class="fab fa-instagram"></i></a>
+                              <a href="#" class="google-plus"><i class="fab fa-skype"></i></a>
+                              <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                     </header>
+                     <!-- Header end -->
+                    
+                    <!-- main section start  -->
+                     <main>
+
+                      <!-- about section start  -->
+                      <div id="about" class="container py-4">
+                        <div class="about-heading" data-aos="fade-down">
+                          <h2 class="font-weight-bold text-center">About Us <div class="underline"></div></h2>
+                          <p class="about-para"><b>Welcome To My website</b> Hell! My name is Akram Ahmed I am a web designer and developer. I will design any kinds of website such as business website portfolio, e commerce and others website If want any kinds website higher me.</p>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-4" data-aos="fade-up-right">
+                            <img src="about_img.jpg" class="w-100" alt="">
+                          </div>
+                          <div class="col-lg-8">
+                            <h3>WEb designer & developer</h3>
+                            <p>There are my some personal details. my birth day my degree my address etc</p>
+                            <div class="row">
+                              <div class="col-lg-6" data-aos="fade-left">
+                                <p><b><i class="fas fa-arrow-circle-right"></i> </b><strong>Birthday:</strong> 3 February 2001</p>
+                                <p><b> <i class="fas fa-arrow-circle-right"></i> </b><strong>Website:</strong> www.akramahmedweb.com</p>
+                                <p><b> <i class="fas fa-arrow-circle-right"></i> </b><strong>Phone:</strong> 01645588523</p>
+                                <p><b> <i class="fas fa-arrow-circle-right"></i> </b><strong>City:</strong> Sylhet</p>
+                              </div>
+                              <div class="col-lg-6" data-aos="fade-right">
+                                <p><b><i class="fas fa-arrow-circle-right"></i> </b><strong>Age:</strong> 20</p>
+                                <p><b> <i class="fas fa-arrow-circle-right"></i> </b><strong>Degree:</strong> honors</p>
+                                <p><b> <i class="fas fa-arrow-circle-right"></i> </b><strong>PhEmailone:</strong> akram2217763@gmail.com</p>
+                                <p><b> <i class="fas fa-arrow-circle-right"></i> </b><strong>Freelance:</strong> Available</p>
+                              </div>
+                              <p>Thans for read my about section If need any kinds of website pless contact me first thank you very much.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- about section end  -->
+
+                      <!-- ======= Skills Section ======= -->
+                      <section id="skills" class="skills section-bg">
+                        <div class="container">
+
+                          <div class="section-title py-3"  data-aos="fade-up">
+                            <h2 class="text-center">Skills <div class="underline"></div></h2>
+                            <p class="sg-para">There is my some profational skills and i am showing it if you need any kinds of help like this skill related I can alwayes help you with a cheap rate</p>
+                          </div>
+                          <div class="row skills-content">
+                            <div class="col-lg-6">
+                              <div class="progress" data-aos="fade-down">
+                                <span class="skill">HTML <i class="val">90%</i></span>
+                                <div class="progress-bar-wrap">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                              <div class="progress" data-aos="fade-down">
+                                <span class="skill">CSS <i class="val">70%</i></span>
+                                <div class="progress-bar-wrap">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                              <div class="progress" data-aos="fade-down">
+                                <span class="skill">JavaScript <i class="val">50%</i></span>
+                                <div class="progress-bar-wrap">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="progress" data-aos="fade-down">
+                                <span class="skill">PHP <i class="val">40%</i></span>
+                                <div class="progress-bar-wrap">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                              <div class="progress" data-aos="fade-down">
+                                <span class="skill">MySql <i class="val">40%</i></span>
+                                <div class="progress-bar-wrap">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                              <div class="progress" data-aos="fade-down">
+                                <span class="skill">WordPress/CMS <i class="val">70%</i></span>
+                                <div class="progress-bar-wrap">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </section>
+                      <!-- End Skills Section -->
+
+                       <!-- gallary section start  -->
+                      <div id="gallary" class="container-fluid py-5">
+                        <div class="gallary-heading" data-aos="fade-up">
+                          <h2 class="text-center py-2">Gallary <div class="underline"></div></h2>
+                          <p class="sg-para">There are some my work related images I think if you want like this because it's like very nice and it's design are also good</p>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="item col-sm-6 col-md-4 mb-3" data-aos="fade-right">
+                                <a href="pic1.jpg" class="fancybox" data-fancybox="gallery1">
+                                    <img src="pic1.jpg" alt="image" width="100%" height="100%">
+                                </a>
+                            </div>
+                            <div class="item col-sm-6 col-md-4 mb-3" data-aos="fade-down">
+                                <a href="pic2.jpg" class="fancybox" data-fancybox="gallery1">
+                                    <img src="pic2.jpg" alt="image" width="100%" height="100%">
+                                </a>
+                            </div>
+                            <div class="item col-sm-6 col-md-4 mb-3" data-aos="fade-left">
+                                <a href="pic3.jpg" class="fancybox" data-fancybox="gallery1">
+                                    <img src="pic3.jpg" alt="image" width="100%" height="100%">
+                                </a>
+                            </div>
+                            <div class="item col-sm-6 col-md-4 mb-3" data-aos="fade-right">
+                                <a href="pic4.jpg" class="fancybox" data-fancybox="gallery1">
+                                    <img src="pic4.jpg" alt="image" width="100%" height="100%">
+                                </a>
+                            </div>
+                            <div class="item col-sm-6 col-md-4 mb-3" data-aos="fade-up">
+                                <a href="pic5.jpg" class="fancybox" data-fancybox="gallery1">
+                                    <img src="pic5.jpg" alt="image" width="100%" height="100%">
+                                </a>
+                            </div>
+                            <div class="item col-sm-6 col-md-4 mb-3" data-aos="fade-left">
+                                <a href="pic6.png" class="fancybox" data-fancybox="gallery1">
+                                    <img src="pic6.png" alt="image" width="100%" height="100%">
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+
+                    <!-- gallary section end  -->
+
+                    <!-- service start  -->
+                    <div id="service" class="service py-2">
+                      <div class="container">
+                        <div class="service-titel pb-5" data-aos="fade-down">
+                          <h2 class="text-center py-4">Service <div class="underline"></div></h2>
+                          <p class="sg-para">I will design profational statics website with HTML CSS JAVASCRIPT and BOOTSTRAP it's look like profational and It's also responsive such as <b>dextop</b>, <b>tablet</b> and <b>mobile</b> redable and design withe wordpress if you want to any kinnds website like busness website, portfolio, toure website and e-commarce website pless contact me</p>                      
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="service-roll" data-aos="fade-right">
+                              <div class="service-icon text-center">
+                                <i class="fas fa-mobile-alt fa-5x fnt-color"></i>
+                              </div>
+                              <h3>Web Design</h3>
+                              <div class="service-desc">
+                                <p>I will design a profational and responsive website it's also uniq and look like profational</p>
+                                <ul>
+                                  <li><i class="far fa-star"></i> busness website</li>
+                                  <li><i class="far fa-star"></i> portfolio website</li>
+                                  <li><i class="far fa-star"></i> toure website</li>
+                                </ul>
+                              </div>                             
+                            </div>
+
+                            <div class="service-roll" data-aos="fade-left">
+                              <div class="service-icon text-center">
+                                <i class="fas fa-laptop-code fa-5x fnt-color"></i>
+                              </div>
+                              <h3>Web Development</h3>
+                              <div class="service-desc">
+                                <p>I will develop a profational and responsive website it's also uniq and look like profational</p>
+                                <ul>
+                                  <li><i class="far fa-star"></i> e-commerce website</li>
+                                  <li><i class="far fa-star"></i> School management system</li>
+                                  <li><i class="far fa-star"></i> blog website</li>
+                                </ul>
+                              </div>                             
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-6">
+                            <div class="service-roll" data-aos="fade-right">
+                              <div class="service-icon text-center">
+                                <i class="fas fa-pencil-alt fa-5x fnt-color"></i>
+                              </div>
+                              <h3>wordpress Design</h3>
+                              <div class="service-desc">
+                                <p>I will design a profational and responsive website it's also uniq and look like profational</p>
+                                <ul>
+                                  <li><i class="far fa-star"></i> wordpress design</li>
+                                  <li><i class="far fa-star"></i> profational wordpress website</li>
+                                  <li><i class="far fa-star"></i> Responsive wordpress website</li>
+                                </ul>
+                              </div>                             
+                            </div>
+
+                            <div class="service-roll" data-aos="fade-left">
+                              <div class="service-icon text-center">
+                                <i class="fab fa-wordpress fa-5x fnt-color"></i>
+                              </div>
+                              <h3>wordpress CMS</h3>
+                              <div class="service-desc">
+                                <p>I will design a profational and responsive website it's also uniq and look like profational</p>
+                                <ul>
+                                  <li><i class="far fa-star"></i> wordpress development</li>
+                                  <li><i class="far fa-star"></i> plugin installation</li>                                            
+                                </ul>
+                              </div>                             
+                            </div>
+                          </div>  
+                        </div>
+                      </div>
+                    </div>
+                    <!-- service end  -->
+
+                   <!-- contact section starts  -->
+
+                   <section class="contact" id="contact" data-aos="zoom-in">
+
+                    <h2 class="text-center py-2">Contact Us <div class="underline"></div></h2>
+                
+                    <form action="">
+                        <div class="inputBox">
+                            <input type="text" placeholder="name">
+                            <input type="email" placeholder="email">
+                        </div>
+                        <div class="inputBox">
+                            <input type="number" placeholder="number">
+                            <input type="text" placeholder="subject">
+                        </div>
+                        <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
+                        <input type="submit" value="Send message" class="btn">
+                    </form>
+                
+                </section>
+
+                  <!-- contact section ends -->
+
+                     </main>
+                    <!-- main section end  -->
+
+                    
+                    <!-- footer section starts  -->
+
+                 <!-- footer section starts  -->
+
+                 <footer id="massage">
+                  <div class="row">
+                    <div class="waves">
+                      <div class="wave" id="wave1"></div>
+                      <div class="wave" id="wave2"></div>
+                      <div class="wave" id="wave3"></div>
+                      <div class="wave" id="wave4"></div>
+                    </div>
+                    <div class="col-lg-3">
+                      <ul class="social_icon">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/kamran.kamranahmed.545/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/kamran_ahmed09/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                      </ul>
+                      <ul class="menu">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#skills">Skills</a></li>
+                          <li><a href="#gallary">Gallary</a></li>
+                          <li><a href="#service">Service</a></li>
+                          <li><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div>
+                   <div class="col-lg-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115806.34359550575!2d91.79094155131145!3d24.899747201107232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375054d3d270329f%3A0xf58ef93431f67382!2sSylhet!5e0!3m2!1sen!2sbd!4v1641978400478!5m2!1sen!2sbd" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                   </div>
+                   <div class="col-lg-3">
+                    <div class="contact-details">
+                     <p><b><span><i class="fas fa-phone-alt"></i></span> phone:</b></p>
+                     <p>+8801645588523</p>
+                     <p><b><span><i class="far fa-envelope"></i></span> Email:</b></p>
+                     <p>kamran076311212gmail.com</p>
+                    </div>
+                   </div>
+                    <p>©2022 Online portfolio | All Rights Reserved</p>
+                  </div>
+              </footer>
+
+                  <!-- footer section end  -->
+
+                </div>
+            </div>
+        </div>       
+
+
+      <!-- bootstrap js cdn  -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+		
+      <!-- for aos scroll animation -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <!-- for type.js auto type my name cdn  -->
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+      <!-- jQuery library for gallary -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>  
+       
+      <!-- for animation  -->
+      <script>
+         // for prelowding 
+        var Preloader = document.getElementById('loading');
+        function myfunction() {
+            Preloader.style.display = 'none';
+        }
+
+      // for scroll animation 
+        AOS.init({
+            Offset: 300,
+            duration: 1000,
+            delay: 200,
+        });
+
+        // for type js 
+        var typed = new Typed('.typed', {
+        strings: ['Web Designer', 'Web Developer', 'WordPress Designer'],
+        typeSpeed: 100,
+        backSpeed: 70,
+        loop: true,
+        });	
+
+
+
+
+    </script>
+		
+		
+    </body>
+</html>
