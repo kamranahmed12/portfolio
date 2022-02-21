@@ -33,13 +33,13 @@
 <style>
 
  /*--- preloder start ---*/
- #loading {
+/*  #loading {
             position: fixed;
             width: 100%;
             height: 100vh;
             background: #fff url('preload.png') no-repeat center;
             z-index: 99999;
-        }
+        } */
  /*--- preloder start ---*/
 
  .bag-color {
@@ -396,7 +396,7 @@ footer .wave#wave4 {
 </style>
 </head>
     <body onload="myfunction()">
-      <div id="loading"></div>
+<!--       <div id="loading"></div> -->
 
           <div class="container-fluid bag-color">
             <div class="row">
@@ -765,10 +765,10 @@ footer .wave#wave4 {
       <!-- for animation  -->
       <script>
          // for prelowding 
-        var Preloader = document.getElementById('loading');
+        /***var Preloader = document.getElementById('loading');
         function myfunction() {
             Preloader.style.display = 'none';
-        }
+        }**/
 
       // for scroll animation 
         AOS.init({
